@@ -102,7 +102,7 @@ class Account():
             print(f"{amount} has been withdrawn from the deposit. Balance is {self.balance}")
 
 
-ba1 = Account("Beket")
+ba1 = Account("Abylay")
 ba2 = Account("Medeu")
 
 ba1.check_balance()
