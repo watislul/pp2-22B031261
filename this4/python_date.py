@@ -1,9 +1,9 @@
 import datetime
 
 # Write a Python program to subtract five days from current date.
-res = datetime.date.today()
-res = res.replace(day = res.day - 5)
-print(res)
+kek = datetime.date.today()
+kek = kek.replace(day = kek.day - 5)
+print(kek)
 
 # Write a Python program to print yesterday, today, tomorrow.
 
