@@ -1,9 +1,10 @@
+from datetime import time, timedelta
 import datetime
 
 # Write a Python program to subtract five days from current date.
-kek = datetime.date.today()
-kek = kek.replace(day = kek.day - 5)
-print(kek)
+dt = date.today() - timedelta(5)
+print('Current Date :',date.today())
+print('5 days before Current Date :',dt)
 
 # Write a Python program to print yesterday, today, tomorrow.
 
