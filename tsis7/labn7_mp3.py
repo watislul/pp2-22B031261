@@ -42,14 +42,14 @@ while 1:
             pg.quit()
         if pg.mouse.get_pressed()[0]:
             print(pg.mouse.get_pos())
-            if 500 <= pg.mouse.get_pos()[1] <= 567 and 367 <= pg.mouse.get_pos()[0] <= 433:
+            if 489 <= pg.mouse.get_pos()[1] <= 569 and 350 <= pg.mouse.get_pos()[0] <= 450:
                 if sounds[sound_index].is_playing:
                     pg.mixer.pause()
                     sounds[sound_index].is_playing = False
                 else:
                     pg.mixer.unpause()
                     sounds[sound_index].is_playing = True
-            elif 73 <= pg.mouse.get_pos()[0] <= 139 and 500 <= pg.mouse.get_pos()[1] <= 567:
+            elif 75 <= pg.mouse.get_pos()[0] <= 140 and 484 <= pg.mouse.get_pos()[1] <= 574:
                 pg.mixer.stop()
                 sounds[sound_index].is_playing = True
                 if(sound_index == 0):
@@ -57,7 +57,7 @@ while 1:
                 sound_index -= 1
                 sounds[sound_index].sound.play()
                 sounds[sound_index].placePhoto(screen)
-            elif 661 <= pg.mouse.get_pos()[0] <= 727 and 500 <= pg.mouse.get_pos()[1] <= 567:
+            elif 668 <= pg.mouse.get_pos()[0] <= 733 and 484 <= pg.mouse.get_pos()[1] <= 574:
                 pg.mixer.stop()
                 sounds[sound_index].is_playing = True
                 if(sound_index == len(sounds) - 1):
