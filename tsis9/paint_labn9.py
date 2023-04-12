@@ -14,7 +14,7 @@ class Button(pg.sprite.Sprite):
     # Инициализурую класс, принимаю координаты где будет отрисована кнопка и путь к её картинке
     def __init__(self, x, y, path):
         super().__init__()
-        self.image = pg.image.load('assets/' + path)
+        self.image = pg.image.load('assets_for_paint_labn9/' + path)
         self.image = pg.transform.scale(self.image, (40, 40))
         self.rect = self.image.get_rect()
         self.rect.x = x
@@ -25,7 +25,7 @@ class Button(pg.sprite.Sprite):
     def make_selected(self, path ,group):
         if not self.is_selected:
             self.prev_image = self.image.copy()
-            self.image = pg.image.load('assets/' + path)
+            self.image = pg.image.load('assets_for_paint_labn9/' + path)
             self.image = pg.transform.scale(self.image, (40, 40))
             self.is_selected = True
         else:
@@ -35,9 +35,9 @@ class Button(pg.sprite.Sprite):
             if i == self:
                 continue
             i.make_default(group)
-    # Метод который делает стандартную картинку для всех кнопок кроме выбранной 
+    # Метод который делает стандартную картинку для всех кнопок кроме выбранной
     def make_default(self, group):
-        try: 
+        try:
             self.image = self.prev_image
             self.is_selected = False
         except:
@@ -179,7 +179,7 @@ while 1:
                 pg.mouse.set_cursor(pg.SYSTEM_CURSOR_HAND)
             else:
                 pg.mouse.set_cursor(pg.SYSTEM_CURSOR_ARROW)
-        if event.type == pg.MOUSEBUTTONDOWN: 
+        if event.type == pg.MOUSEBUTTONDOWN:
             if brush.rect.collidepoint(event.pos):
                 brush.make_selected('brush_selected.png', all_buttons)
             if draw_rect.rect.collidepoint(event.pos):
@@ -203,7 +203,7 @@ while 1:
             if triangle.rect.collidepoint(event.pos):
                 triangle.make_selected('triangle_selected.png', all_buttons)
             if right_triangle.rect.collidepoint(event.pos):
-                right_triangle.make_selected('right_triangle_selected.jpeg', all_buttons)
+                right_triangle.make_selected('right_triangle_selected.jpg', all_buttons)
             last_pos = event.pos
             is_drawing = True
 
